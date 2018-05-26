@@ -1,4 +1,4 @@
-import './css/site.css';
+import './less/site.less';
 import 'bootstrap';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

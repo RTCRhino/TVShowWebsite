@@ -21,7 +21,7 @@ export class Counter extends React.Component<Props> {
                     <p>This is a simple example of a React/MobX component.</p>
                     <p>Current count: <strong>{this.props.testStore.count}</strong></p>
                     <div className="btn-group" role="group">
-                        <button className="btn btn-danger" onClick={this.props.testStore.decrementCount}><span className="fa fa-chevron-circle-down"></span> Decrement</button>
+                        <button className="btn btn-danger joebutton" onClick={this.props.testStore.decrementCount}><span className="fa fa-chevron-circle-down"></span> Decrement</button>
                         <button className="btn btn-success" onClick={this.props.testStore.incrementCount}><span className="fa fa-chevron-circle-up"></span> Increment</button>
                         {/*<button className="btn btn-info" onClick={this.props.testStore}><span className="fa fa-refresh"></span> Reset</button>*/}
                     </div>
