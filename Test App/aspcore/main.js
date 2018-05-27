@@ -1,5 +1,5 @@
 ﻿// ./main.js
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron');
 
 let win = null;
 
@@ -12,7 +12,7 @@ function createWindow() {
 
     // Show dev tools
     // Remove this line before distributing
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
 
     // Remove window once app is closed
     win.on('closed', function () {
@@ -32,12 +32,12 @@ app.on('ready', function () {
 
 app.on('activate', () => {
     if (win === null) {
-        createWindow()
+        createWindow();
     }
-})
+});
 
 app.on('window-all-closed', function () {
-    if (process.platform != 'darwin') {
+    if (process.platform !== 'darwin') {
         app.quit();
     }
 });
@@ -116,10 +116,10 @@ const mainMenuTemplate = [
             //},
             {
                 label: 'Quit',
-                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+                accelerator: process.platform === 'darwin' ? 'Command+Q' : 'Ctrl+Q',
                 click() {
                     app.quit();
-                },
+                }
             }
         ]
     }
@@ -127,7 +127,7 @@ const mainMenuTemplate = [
 ];
 
 // if mac add empty object to menu
-if (process.platform == 'darwin') {
+if (process.platform === 'darwin') {
     mainMenuTemplate.unshift({});
 }
 
@@ -138,7 +138,7 @@ if (process.env.NODE_ENV !== 'production') {
         submenu: [
             {
                 label: 'Toggle DevTools',
-                accelerator: process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+                accelerator: process.platform === 'darwin' ? 'Command+I' : 'Ctrl+I',
                 click(item, focusedWindow) {
                     focusedWindow.toggleDevTools();
                 }

@@ -29,7 +29,7 @@ module.exports = (env) => {
                             { loader: isDevBuild ? 'css-loader' : 'css-loader?minimize' },
                             { loader: 'less-loader' }
                         ]
-                    }),
+                    })
                 },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
