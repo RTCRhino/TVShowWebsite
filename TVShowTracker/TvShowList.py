@@ -12,11 +12,11 @@ for counter in range(150):
     with io.open("tvList.txt", "r", encoding="utf-8") as f:
         j = json.load(f)
 
-    with open("TvShowResults.txt", "r") as f:
+    with open("D:\\Programmes\\TVShowWebsite\\TVShowTracker\\TvListing\\TvListing\\TvShowResults.json", "r") as f:
         TvShowList = json.load(f)
 
     for item in j:
         TvShowList[item["name"]] = item["id"]
 
-    with open("tvShowResults.txt", "w") as outfile:
+    with open("D:\\Programmes\\TVShowWebsite\\TVShowTracker\\TvListing\\TvListing\\TvShowResults.json", "w") as outfile:
         json.dump(TvShowList, outfile)
