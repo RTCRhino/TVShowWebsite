@@ -6,11 +6,12 @@ export class Home extends React.Component<RouteComponentProps<{}>, {}> {
         return <div className='content'>
             <div className="row">
                 <div className = "col-sm-3">
-                    <button className="btn-block program-button"></button>
+                    <input type="image" src="http://static.tvmaze.com/uploads/images/original_untouched/40/101208.jpg" className="responsive" />
                 </div>
                 <div className = "col-sm-9 program-details-frame">
                     <h3>Program name</h3>
                     <p>Description of your next epsiode</p>
+                    <p>Test</p>
                 </div>
             </div>
         </div>;
