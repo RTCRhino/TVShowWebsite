@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Nav, NavItem, Navbar } from 'react-bootstrap';
 
 export class NavMenu extends React.Component<{}, {}> {
     public render() {
@@ -7,19 +7,20 @@ export class NavMenu extends React.Component<{}, {}> {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#home">Oodle</a>
+                        <a href="#">Oodle</a>
                     </Navbar.Brand>
-                    <Navbar.Toggle />
                 </Navbar.Header>
-                <Navbar.Collapse>
-                    <Navbar.Form pullLeft>
-                        <FormGroup>
-                            <FormControl type="text" placeholder="Search" />
-                        </FormGroup>{' '}
-                        <Button type="submit">Submit</Button>
-                    </Navbar.Form>
-                </Navbar.Collapse>
+
+                <Nav>
+                    <NavItem eventKey={1} href="MyShows">
+                        <div className="navbar-item">My Shows</div>
+                    </NavItem>
+
+                    <NavItem eventKey={2} href="#">
+                        <div className="navbar-item">Link</div>
+                    </NavItem>
+                </Nav>
             </Navbar>;
-        </div>;
+</div>;
     }
 }
