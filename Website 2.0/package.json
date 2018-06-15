@@ -1,0 +1,14 @@
+{
+  "name": "website-2.0",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ryan Crane",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}
